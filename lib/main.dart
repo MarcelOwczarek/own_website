@@ -53,17 +53,20 @@ class MyApp extends StatelessWidget {
                   const SizedBox(height: 40),
                   Text(
                     "I'm Marcel",
-                    style: GoogleFonts.raleway(fontSize: 25),
+                    style:
+                        GoogleFonts.raleway(fontSize: 25, color: Colors.white),
                   ),
                   const SizedBox(height: 20),
                   Text(
                     'Passionate Mobile Developer',
-                    style: GoogleFonts.raleway(fontSize: 25),
+                    style:
+                        GoogleFonts.raleway(fontSize: 25, color: Colors.white),
                   ),
                   const SizedBox(height: 20),
                   const Icon(
                     Icons.arrow_drop_down_circle_outlined,
                     size: 40,
+                    color: Colors.white,
                   )
                 ],
               )
