@@ -75,10 +75,13 @@ class MyApp extends StatelessWidget {
                     width: 130,
                   ),
                   const SizedBox(height: 20),
-                  const CircleAvatar(
-                    backgroundImage: AssetImage('images/picture.jpg'),
-                    radius: 180,
-                    backgroundColor: Colors.grey,
+                  const Material(
+                    shape: CircleBorder(side: BorderSide.none),
+                    elevation: 25,
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage('images/picture.jpg'),
+                      radius: 180,
+                    ),
                   ),
                   const SizedBox(height: 35),
                   Text(
