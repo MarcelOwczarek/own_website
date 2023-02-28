@@ -28,11 +28,11 @@ class my_description extends StatelessWidget {
             children: [
               const Custom_Image(),
               const SizedBox(height: 20),
-              text[5],
+              text[5], // <- Text('Hello')..
               const SizedBox(height: 5),
-              text[6],
+              text[6], // <- Text('Description')..
               const SizedBox(height: 5),
-              text[7],
+              text[7], // <- Text('Signature')..
             ],
           ),
         ),

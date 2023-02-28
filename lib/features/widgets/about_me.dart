@@ -13,7 +13,7 @@ class about_me extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        text[3],
+        text[3], // <- Text ('about me')..
         Lottie.network(
           'https://assets4.lottiefiles.com/packages/lf20_dxwu3xu0.json',
           width: 50,

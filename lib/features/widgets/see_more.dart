@@ -22,7 +22,7 @@ class see_more extends StatelessWidget {
                 width: 50,
                 height: 50,
               ),
-              text[4],
+              text[4], // <- Text ('see more')..
             ],
           ),
         ),

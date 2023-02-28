@@ -18,7 +18,7 @@ class Home_Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: (text[0]),
+        title: (text[0]), // <- my Name and surname
         backgroundColor: Colors.grey[900],
         leading: GestureDetector(
           onTap: () {},
@@ -42,24 +42,24 @@ class Home_Page extends StatelessWidget {
           children: [
             Column(
               children: [
-                const see_more(),
+                const see_more(), // <- arrow in left top corner of Home_Page
                 const SizedBox(width: 130),
                 const Custom_SizedBox(),
-                const Custom_CircleAvatar(),
+                const Custom_CircleAvatar(), // <- main photo of me
                 const SizedBox(height: 35),
-                text[1],
+                text[1], // <- welcome under the photo
                 const Custom_SizedBox(),
-                text[2],
+                text[2], // <- who i am aspiring also under the photo
                 const Custom_SizedBox(),
-                const about_me(),
+                const about_me(), // <- arrow directed to bottom of the Home_Page
                 const SizedBox(height: 150),
                 const Custom_Divider(),
-                const my_description(),
+                const my_description(), // <- Container with my description etc.
                 const SizedBox(height: 50),
-                text[8],
+                text[8], // <- signature on bottom of whole Home_Page
                 const Custom_SizedBox(),
               ],
-            )
+            ),
           ],
         ),
       ),
