@@ -27,34 +27,48 @@ class MyApp extends StatelessWidget {
             child: const Icon(Icons.menu),
           ),
         ),
-        body: ListView(
-          children: [
-            Column(
-              children: [
-                const SizedBox(height: 100),
-                const CircleAvatar(
-                  backgroundImage: AssetImage('images/picture.jpg'),
-                  radius: 180,
-                  backgroundColor: Colors.grey,
-                ),
-                const SizedBox(height: 40),
-                Text(
-                  "I'm Marcel",
-                  style: GoogleFonts.raleway(fontSize: 25),
-                ),
-                const SizedBox(height: 20),
-                Text(
-                  'Passionate Mobile Developer',
-                  style: GoogleFonts.raleway(fontSize: 25),
-                ),
-                const SizedBox(height: 20),
-                const Icon(
-                  Icons.arrow_drop_down_circle_outlined,
-                  size: 40,
-                )
+        body: Container(
+          height: 700,
+          width: 400,
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Color(0xFF2B5876),
+                Color(0xff4E4376),
               ],
-            )
-          ],
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+            ),
+          ),
+          child: ListView(
+            children: [
+              Column(
+                children: [
+                  const SizedBox(height: 100),
+                  const CircleAvatar(
+                    backgroundImage: AssetImage('images/picture.jpg'),
+                    radius: 180,
+                    backgroundColor: Colors.grey,
+                  ),
+                  const SizedBox(height: 40),
+                  Text(
+                    "I'm Marcel",
+                    style: GoogleFonts.raleway(fontSize: 25),
+                  ),
+                  const SizedBox(height: 20),
+                  Text(
+                    'Passionate Mobile Developer',
+                    style: GoogleFonts.raleway(fontSize: 25),
+                  ),
+                  const SizedBox(height: 20),
+                  const Icon(
+                    Icons.arrow_drop_down_circle_outlined,
+                    size: 40,
+                  )
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
