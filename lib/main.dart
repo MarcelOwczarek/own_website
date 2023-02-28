@@ -47,6 +47,11 @@ class MyApp extends StatelessWidget {
                   'Passionate Mobile Developer',
                   style: GoogleFonts.raleway(fontSize: 25),
                 ),
+                const SizedBox(height: 20),
+                const Icon(
+                  Icons.arrow_drop_down_circle_outlined,
+                  size: 40,
+                )
               ],
             )
           ],
