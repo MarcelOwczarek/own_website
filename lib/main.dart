@@ -27,6 +27,30 @@ class MyApp extends StatelessWidget {
             child: const Icon(Icons.menu),
           ),
         ),
+        body: ListView(
+          children: [
+            Column(
+              children: [
+                const SizedBox(height: 100),
+                const CircleAvatar(
+                  backgroundImage: AssetImage('images/picture.jpg'),
+                  radius: 180,
+                  backgroundColor: Colors.grey,
+                ),
+                const SizedBox(height: 40),
+                Text(
+                  "I'm Marcel",
+                  style: GoogleFonts.raleway(fontSize: 25),
+                ),
+                const SizedBox(height: 20),
+                Text(
+                  'Passionate Mobile Developer',
+                  style: GoogleFonts.raleway(fontSize: 25),
+                ),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
