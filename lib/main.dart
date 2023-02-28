@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lottie/lottie.dart';
+import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 void main() {
   runApp(const MyApp());
@@ -44,13 +46,41 @@ class MyApp extends StatelessWidget {
             children: [
               Column(
                 children: [
-                  const SizedBox(height: 100),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(15),
+                        child: Column(
+                          children: [
+                            Lottie.network(
+                              'https://assets2.lottiefiles.com/packages/lf20_o0m8c13d.json',
+                              width: 50,
+                              height: 50,
+                            ),
+                            GradientText(
+                              'see more',
+                              style: GoogleFonts.raleway(fontSize: 17),
+                              gradientType: GradientType.linear,
+                              colors: const [
+                                Colors.cyan,
+                                Colors.blue,
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    width: 130,
+                  ),
+                  const SizedBox(height: 20),
                   const CircleAvatar(
                     backgroundImage: AssetImage('images/picture.jpg'),
                     radius: 180,
                     backgroundColor: Colors.grey,
                   ),
-                  const SizedBox(height: 40),
+                  const SizedBox(height: 35),
                   Text(
                     "I'm Marcel",
                     style:
@@ -63,10 +93,19 @@ class MyApp extends StatelessWidget {
                         GoogleFonts.raleway(fontSize: 25, color: Colors.white),
                   ),
                   const SizedBox(height: 20),
-                  const Icon(
-                    Icons.arrow_drop_down_circle_outlined,
-                    size: 40,
-                    color: Colors.white,
+                  GradientText(
+                    'about me',
+                    style: GoogleFonts.raleway(fontSize: 17),
+                    gradientType: GradientType.linear,
+                    colors: const [
+                      Colors.cyan,
+                      Colors.blue,
+                    ],
+                  ),
+                  Lottie.network(
+                    'https://assets4.lottiefiles.com/packages/lf20_dxwu3xu0.json',
+                    width: 50,
+                    height: 50,
                   )
                 ],
               )
