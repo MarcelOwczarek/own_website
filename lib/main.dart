@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,15 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Scaffold(),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(
+            'Marcel Owczarek',
+            style: GoogleFonts.raleway(),
+          ),
+          backgroundColor: Colors.grey[900],
+        ),
+      ),
     );
   }
 }
