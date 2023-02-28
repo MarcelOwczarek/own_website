@@ -22,6 +22,10 @@ class MyApp extends StatelessWidget {
             style: GoogleFonts.raleway(),
           ),
           backgroundColor: Colors.grey[900],
+          leading: GestureDetector(
+            onTap: () {},
+            child: const Icon(Icons.menu),
+          ),
         ),
       ),
     );
