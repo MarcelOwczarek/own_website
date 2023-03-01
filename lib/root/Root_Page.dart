@@ -71,9 +71,48 @@ class Projects_Page extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 25),
+            Project_Container(context,
+                project_name: '~ Republic Customs Army mobile app',
+                project_description:
+                    'The mobile application was created for a friend who has a company in the 3D design and graphic industry about Star War. The app itself was supossed to look like a store. At the moment there is no content permanently in the code, everything is based on Firebase. Without interfering with the code, we can add e.g. news to the dedicated screen in real time, as well as new products. The current status of the mobile application can be described as unfinished according to initial plans. There is no option to add products to favorites or the basket and payment. All source code is on Github, check contact bookmark. However the app itself is currently available in the form of a webapp. Soon it will also appear on the Google play store for Android.'),
           ],
         )
       ],
     );
   }
+}
+
+Widget Project_Container(
+  BuildContext context, {
+  required String project_name,
+  required String project_description,
+}) {
+  final first_style = GoogleFonts.raleway(color: Colors.white);
+  final second_style = GoogleFonts.raleway(color: Colors.white);
+
+  return Container(
+    width: 350,
+    height: 400,
+    decoration: const BoxDecoration(
+      borderRadius: BorderRadius.all(
+        Radius.circular(15),
+      ),
+      color: Colors.blueGrey,
+    ),
+    child: Padding(
+      padding: const EdgeInsets.all(20),
+      child: Column(
+        children: [
+          Text(project_name, style: first_style),
+          const SizedBox(height: 25),
+          Text(
+            project_description,
+            style: second_style,
+            textAlign: TextAlign.justify,
+          ),
+          const SizedBox(height: 25),
+        ],
+      ),
+    ),
+  );
 }
