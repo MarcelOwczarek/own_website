@@ -57,12 +57,18 @@ class Custom_NavigationDrawer extends StatelessWidget {
 
     return Material(
       color: Colors.transparent,
-      child: ListTile(
-        selected: isSelected,
-        selectedTileColor: Colors.indigo,
-        leading: Icon(icon, color: color),
-        title: Text(text, style: style),
-        onTap: () => selectItem(context, item),
+      child: Padding(
+        padding: const EdgeInsets.all(15),
+        child: ListTile(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30),
+          ),
+          selected: isSelected,
+          selectedTileColor: Colors.indigo,
+          leading: Icon(icon, color: color),
+          title: Text(text, style: style),
+          onTap: () => selectItem(context, item),
+        ),
       ),
     );
   }
