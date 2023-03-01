@@ -18,11 +18,11 @@ class Home_Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const Custom_NavigationDrawer(),
-      appBar: AppBar(
-        title: text[0], // <- my Name and surname
-        backgroundColor: Colors.grey[900],
-      ),
+      // drawer: const Custom_NavigationDrawer(),
+      // appBar: AppBar(
+      //   title: text[0], // <- my Name and surname
+      //   backgroundColor: Colors.grey[900],
+      //
       body: Container(
         height: 700,
         width: 400,
