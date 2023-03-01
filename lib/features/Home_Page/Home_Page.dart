@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:own_website/features/texts/texts.dart';
 import 'package:own_website/features/widgets/Custom_CircleAvatar.dart';
 import 'package:own_website/features/widgets/Custom_Divider.dart';
+import 'package:own_website/features/widgets/Custom_NavigationDrawer.dart';
 import 'package:own_website/features/widgets/Custom_SizedBox.dart';
 import 'package:own_website/features/widgets/about_me.dart';
 import 'package:own_website/features/widgets/my_description.dart';
@@ -17,13 +18,10 @@ class Home_Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const Custom_NavigationDrawer(),
       appBar: AppBar(
-        title: (text[0]), // <- my Name and surname
+        title: text[0], // <- my Name and surname
         backgroundColor: Colors.grey[900],
-        leading: GestureDetector(
-          onTap: () {},
-          child: const Icon(Icons.menu),
-        ),
       ),
       body: Container(
         height: 700,
