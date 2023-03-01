@@ -67,7 +67,7 @@ class Custom_NavigationDrawer extends StatelessWidget {
           selectedTileColor: Colors.indigo,
           leading: Icon(icon, color: color),
           title: Text(text, style: style),
-          onTap: () => selectItem(context, item),
+          onTap: () => selectItem(context, item, Navigator.pop(context)),
         ),
       ),
     );
@@ -92,7 +92,7 @@ class NavigationProvider extends ChangeNotifier {
   }
 }
 
-void selectItem(BuildContext context, NavigationItem item) {
+void selectItem(BuildContext context, NavigationItem item, void pop) {
   final provider = Provider.of<NavigationProvider>(context, listen: false);
   provider.setNavigationItem(item);
 }
