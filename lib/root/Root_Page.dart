@@ -20,7 +20,21 @@ class Root_Page extends StatelessWidget {
         title: text[0], // <- my Name and surname
         backgroundColor: Colors.grey[900],
       ),
-      body: const MainPage(),
+      body: Container(
+        height: 700,
+        width: 400,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Color(0xFF2B5876),
+              Color(0xff4E4376),
+            ],
+            begin: Alignment.topRight,
+            end: Alignment.bottomLeft,
+          ),
+        ),
+        child: const MainPage(),
+      ),
     );
   }
 }

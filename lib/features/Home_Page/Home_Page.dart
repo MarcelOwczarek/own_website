@@ -16,45 +16,29 @@ class Home_Page extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        height: 700,
-        width: 400,
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              Color(0xFF2B5876),
-              Color(0xff4E4376),
-            ],
-            begin: Alignment.topRight,
-            end: Alignment.bottomLeft,
-          ),
-        ),
-        child: ListView(
+    return ListView(
+      children: [
+        Column(
           children: [
-            Column(
-              children: [
-                const see_more(), // <- arrow in left top corner of Home_Page
-                const SizedBox(width: 130),
-                const Custom_SizedBox(),
-                const Custom_CircleAvatar(), // <- main photo of me
-                const SizedBox(height: 35),
-                text[1], // <- welcome under the photo
-                const Custom_SizedBox(),
-                text[2], // <- who i am aspiring also under the photo
-                const Custom_SizedBox(),
-                const about_me(), // <- arrow directed to bottom of the Home_Page
-                const SizedBox(height: 150),
-                const Custom_Divider(),
-                const my_description(), // <- Container with my description etc.
-                const SizedBox(height: 50),
-                text[8], // <- signature on bottom of whole Home_Page
-                const Custom_SizedBox(),
-              ],
-            ),
+            const see_more(), // <- arrow in left top corner of Home_Page
+            const SizedBox(width: 130),
+            const Custom_SizedBox(),
+            const Custom_CircleAvatar(), // <- main photo of me
+            const SizedBox(height: 35),
+            text[1], // <- welcome under the photo
+            const Custom_SizedBox(),
+            text[2], // <- who i am aspiring also under the photo
+            const Custom_SizedBox(),
+            const about_me(), // <- arrow directed to bottom of the Home_Page
+            const SizedBox(height: 150),
+            const Custom_Divider(),
+            const my_description(), // <- Container with my description etc.
+            const SizedBox(height: 50),
+            text[8], // <- signature on bottom of whole Home_Page
+            const Custom_SizedBox(),
           ],
         ),
-      ),
+      ],
     );
   }
 }
