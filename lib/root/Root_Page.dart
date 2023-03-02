@@ -96,28 +96,30 @@ Widget Project_Container(
   final first_style = GoogleFonts.raleway(color: Colors.white);
   final second_style = GoogleFonts.raleway(color: Colors.white);
 
-  return Container(
-    width: 350,
-    height: 400,
-    decoration: const BoxDecoration(
-      borderRadius: BorderRadius.all(
-        Radius.circular(15),
+  return FittedBox(
+    fit: BoxFit.fitHeight,
+    child: Container(
+      width: 350,
+      decoration: const BoxDecoration(
+        borderRadius: BorderRadius.all(
+          Radius.circular(15),
+        ),
+        color: Colors.blueGrey,
       ),
-      color: Colors.blueGrey,
-    ),
-    child: Padding(
-      padding: const EdgeInsets.all(20),
-      child: Column(
-        children: [
-          Text(project_name, style: first_style),
-          const SizedBox(height: 25),
-          Text(
-            project_description,
-            style: second_style,
-            textAlign: TextAlign.justify,
-          ),
-          const SizedBox(height: 25),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          children: [
+            Text(project_name, style: first_style),
+            const SizedBox(height: 25),
+            Text(
+              project_description,
+              style: second_style,
+              textAlign: TextAlign.justify,
+            ),
+            const SizedBox(height: 25),
+          ],
+        ),
       ),
     ),
   );
