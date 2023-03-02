@@ -74,7 +74,13 @@ class Projects_Page extends StatelessWidget {
             Project_Container(context,
                 project_name: '~ Republic Customs Army mobile app',
                 project_description:
-                    'The mobile application was created for a friend who has a company in the 3D design and graphic industry about Star War. The app itself was supossed to look like a store. At the moment there is no content permanently in the code, everything is based on Firebase. Without interfering with the code, we can add e.g. news to the dedicated screen in real time, as well as new products. The current status of the mobile application can be described as unfinished according to initial plans. There is no option to add products to favorites or the basket and payment. All source code is on Github, check contact bookmark. However the app itself is currently available in the form of a webapp. Soon it will also appear on the Google play store for Android.'),
+                    'The mobile application was created for a friend who has a company in the 3D design and graphic industry about Star Wars. The app itself was supossed to look like a store. At the moment there is no content permanently in the code, everything is based on Firebase. Without interfering with the code, we can add e.g. news to the dedicated screen in real time, as well as new products. The current status of the mobile application can be described as unfinished according to initial plans. There is no option to add products to favorites or the basket and payment. All source code is on Github, check contact bookmark. However the app itself is currently available in the form of a webapp. Soon it will also appear on the Google play store for Android.'),
+            const SizedBox(height: 25),
+            Project_Container(context,
+                project_name: '~ Invoice app ( currently under development )',
+                project_description:
+                    'The idea is to create simple minimalistic app where we can generate invoices for our company. Just by providing every necessary info like information of seller/buyer/products, then we could be able to generate invoice easily and fast . Beside that for a person that would create account in the app there will be option to store all generated invoices, so user can get them from every devices.'),
+            const SizedBox(height: 25),
           ],
         )
       ],
