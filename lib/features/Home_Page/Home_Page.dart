@@ -1,13 +1,13 @@
 // ignore_for_file: file_names, camel_case_types
 
 import 'package:flutter/material.dart';
-import 'package:own_website/features/texts/texts.dart';
-import 'package:own_website/features/widgets/Custom_CircleAvatar.dart';
-import 'package:own_website/features/widgets/Custom_Divider.dart';
-import 'package:own_website/features/widgets/Custom_SizedBox.dart';
-import 'package:own_website/features/widgets/about_me.dart';
-import 'package:own_website/features/widgets/my_description.dart';
-import 'package:own_website/features/widgets/see_more.dart';
+import 'package:own_website/features/Home_Page/texts/texts.dart';
+import 'package:own_website/features/Home_Page/widgets/Custom_CircleAvatar.dart';
+import 'package:own_website/features/Home_Page/widgets/Custom_Divider.dart';
+import 'package:own_website/features/Home_Page/widgets/Custom_SizedBox.dart';
+import 'package:own_website/features/Home_Page/widgets/about_me.dart';
+import 'package:own_website/features/Home_Page/widgets/my_description.dart';
+import 'package:own_website/features/Home_Page/widgets/see_more.dart';
 
 class Home_Page extends StatelessWidget {
   const Home_Page({

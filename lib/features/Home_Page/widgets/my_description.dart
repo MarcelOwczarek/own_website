@@ -1,8 +1,8 @@
 // ignore_for_file: file_names, camel_case_type, camel_case_types
 
 import 'package:flutter/material.dart';
-import 'package:own_website/features/texts/texts.dart';
-import 'package:own_website/features/widgets/Custom_Image.dart';
+import 'package:own_website/features/Home_Page/texts/texts.dart';
+import 'package:own_website/features/Home_Page/widgets/Custom_Image.dart';
 
 class my_description extends StatelessWidget {
   const my_description({

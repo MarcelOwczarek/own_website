@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:own_website/features/texts/texts.dart';
+import 'package:own_website/features/Home_Page/texts/texts.dart';
 
 class about_me extends StatelessWidget {
   const about_me({

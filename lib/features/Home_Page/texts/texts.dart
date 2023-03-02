@@ -4,19 +4,15 @@ import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 final text = <Widget>[
   /////////////////////////////////////////////////////////////////////////
+  // Appbar
+  Text('Marcel Owczarek', // - 0
+      style: GoogleFonts.raleway()),
+  /////////////////////////////////////////////////////////////////////////
   // Texts under the photo in Home_Page:
-  Text(
-    'Marcel Owczarek', // - 0
-    style: GoogleFonts.raleway(),
-  ),
-  Text(
-    "I'm Marcel", // - 1
-    style: GoogleFonts.raleway(fontSize: 25, color: Colors.white),
-  ),
-  Text(
-    'Passionate Mobile Developer', // - 2
-    style: GoogleFonts.raleway(fontSize: 25, color: Colors.white),
-  ),
+  Text("I'm Marcel", // - 1
+      style: GoogleFonts.raleway(fontSize: 25, color: Colors.white)),
+  Text('Passionate Mobile Developer', // - 2
+      style: GoogleFonts.raleway(fontSize: 25, color: Colors.white)),
   /////////////////////////////////////////////////////////////////////////
   // Texts next to lottie animations in Home_Page:
   GradientText(
@@ -71,5 +67,4 @@ final text = <Widget>[
       color: Colors.white,
     ),
   ),
-  /////////////////////////////////////////////////////////////////////////
 ];
