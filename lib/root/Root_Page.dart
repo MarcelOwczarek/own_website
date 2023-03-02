@@ -81,7 +81,7 @@ class Projects_Page extends StatelessWidget {
               'My Projects:',
               style: GoogleFonts.raleway(
                 fontSize: 20,
-                color: Colors.black,
+                color: Colors.white,
               ),
             ),
             const SizedBox(height: 25),
