@@ -64,9 +64,7 @@ Widget Project_Container(
   required String button_text,
   required Color button_color,
 }) {
-  final first_style = GoogleFonts.raleway(color: Colors.white);
-  final second_style = GoogleFonts.raleway(color: Colors.white);
-  final third_style = GoogleFonts.raleway(color: Colors.white);
+  final style = GoogleFonts.raleway(color: Colors.white);
 
   return FittedBox(
     fit: BoxFit.fitHeight,
@@ -82,11 +80,11 @@ Widget Project_Container(
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
-            Text(project_name, style: first_style),
+            Text(project_name, style: style),
             const SizedBox(height: 25),
             Text(
               project_description,
-              style: second_style,
+              style: style,
               textAlign: TextAlign.justify,
             ),
             const SizedBox(height: 15),
@@ -103,7 +101,7 @@ Widget Project_Container(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Icon(button_icon, size: 20),
-                    Text(button_text, style: third_style),
+                    Text(button_text, style: style),
                   ],
                 ),
               ),
