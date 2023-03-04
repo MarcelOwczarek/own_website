@@ -60,7 +60,7 @@ class _MainPageState extends State<MainPage> {
       case NavigationItem.projects:
         return Projects_Page();
       case NavigationItem.contact:
-        return const Contact_Page();
+        return Contact_Page();
     }
   }
 }
