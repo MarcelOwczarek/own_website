@@ -17,33 +17,24 @@ class Root_Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const Custom_NavigationDrawer(),
-      body: NestedScrollView(
-        floatHeaderSlivers: true,
-        headerSliverBuilder: (BuildContext context, bool isScrolled) {
-          return [
-            SliverAppBar(
-              title: text[0],
-              floating: true,
-              snap: true,
-              backgroundColor: Colors.grey[900],
-            )
-          ];
-        },
-        body: Container(
-          height: 700,
-          width: 400,
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Color(0xFF2B5876),
-                Color(0xff4E4376),
-              ],
-              begin: Alignment.topRight,
-              end: Alignment.bottomLeft,
-            ),
+      appBar: AppBar(
+        title: text[0], // <- my Name and surname
+        backgroundColor: Colors.grey[900],
+      ),
+      body: Container(
+        height: 700,
+        width: 400,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Color(0xFF2B5876),
+              Color(0xff4E4376),
+            ],
+            begin: Alignment.topRight,
+            end: Alignment.bottomLeft,
           ),
-          child: const MainPage(),
         ),
+        child: const MainPage(),
       ),
     );
   }
