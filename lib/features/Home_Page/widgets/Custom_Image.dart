@@ -9,13 +9,24 @@ class Custom_Image extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(10),
-      child: Image.asset(
-        'images/picture2.jpg',
-        width: 180,
-        height: 180,
-        fit: BoxFit.fill,
+    return Container(
+      decoration: const BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black,
+            spreadRadius: 1,
+            blurRadius: 10,
+          )
+        ],
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(10),
+        child: Image.asset(
+          'images/picture2.jpg',
+          width: 180,
+          height: 180,
+          fit: BoxFit.fill,
+        ),
       ),
     );
   }
