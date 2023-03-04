@@ -58,7 +58,7 @@ class _MainPageState extends State<MainPage> {
       case NavigationItem.homepage:
         return const Home_Page();
       case NavigationItem.projects:
-        return const Projects_Page();
+        return Projects_Page();
       case NavigationItem.contact:
         return const Contact_Page();
     }

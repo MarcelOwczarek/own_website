@@ -2,9 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Projects_Page extends StatelessWidget {
-  const Projects_Page({
+  Projects_Page({
     super.key,
   });
 
@@ -17,6 +18,9 @@ class Projects_Page extends StatelessWidget {
   final project_description_2 =
       'The idea is to create simple minimalistic app where we can generate invoices for our company. Just by providing every necessary info like information of seller/buyer/products, then we could be able to generate invoice easily and fast . Beside that for a person that would create account in the app there will be option to store all generated invoices, so user can get them from every devices.';
   final button_text_2 = 'Not available yet';
+
+  final Uri RCA = Uri.parse('https://republiccustomsarmy.web.app/#/');
+  final Uri invoice_app = Uri.parse('https://invoiceapp.web.app/#/');
 
   @override
   Widget build(BuildContext context) {
@@ -38,6 +42,7 @@ class Projects_Page extends StatelessWidget {
               button_icon: Icons.check,
               button_text: button_text,
               button_color: Colors.green,
+              launch_url: RCA,
             ),
             const sizedbox(),
             Project_Container(
@@ -47,6 +52,7 @@ class Projects_Page extends StatelessWidget {
               button_icon: Icons.construction,
               button_text: button_text_2,
               button_color: Colors.white12,
+              launch_url: invoice_app,
             ),
             const sizedbox(),
           ],
@@ -63,6 +69,7 @@ Widget Project_Container(
   required IconData button_icon,
   required String button_text,
   required Color button_color,
+  required dynamic launch_url,
 }) {
   final style = GoogleFonts.raleway(color: Colors.white);
 
@@ -92,7 +99,9 @@ Widget Project_Container(
               height: 45,
               width: 170,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  launchUrl(launch_url);
+                },
                 style: ElevatedButton.styleFrom(
                     backgroundColor: button_color,
                     shape: RoundedRectangleBorder(
