@@ -4,26 +4,29 @@ import 'package:flutter/material.dart';
 import 'package:own_website/features/Contact_Page/Contact_Page.dart';
 import 'package:own_website/features/Home_Page/Home_Page.dart';
 import 'package:own_website/features/Projects_Page/Projects_Page.dart';
-import 'package:own_website/features/Home_Page/texts/texts.dart';
+import 'package:own_website/features/Home_Page/texts/text_mobile.dart';
 import 'package:own_website/features/Home_Page/widgets/Custom_NavigationDrawer.dart';
 import 'package:provider/provider.dart';
+import 'package:sizer/sizer.dart';
 
 class Root_Page extends StatelessWidget {
-  const Root_Page({
+  Root_Page({
     super.key,
   });
+
+  final isMobile = SizerUtil.deviceType == DeviceType.mobile;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const Custom_NavigationDrawer(),
       appBar: AppBar(
-        title: text[0], // <- my Name and surname
+        title: text_mobile[0], // <- my Name and surname
         backgroundColor: Colors.grey[900],
       ),
       body: Container(
-        height: 700,
-        width: 400,
+        height: isMobile ? 100.h : 500.h,
+        width: isMobile ? 100.w : 500.w,
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [
@@ -56,7 +59,7 @@ class _MainPageState extends State<MainPage> {
 
     switch (navigationItem) {
       case NavigationItem.homepage:
-        return const Home_Page();
+        return Home_Page();
       case NavigationItem.projects:
         return Projects_Page();
       case NavigationItem.contact:
