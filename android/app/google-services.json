@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "628864174209",
+    "project_id": "marcelowczarek",
+    "storage_bucket": "marcelowczarek.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628864174209:android:1906033b123ac8dde3a580",
+        "android_client_info": {
+          "package_name": "com.marcelowczarek.own_website"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "628864174209-ob0m6ooc8qi1atoapm8h7hk0k551e397.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwhDWiy9AZfMbpwxnAdrHq803MT8-iZzo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "628864174209-ob0m6ooc8qi1atoapm8h7hk0k551e397.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

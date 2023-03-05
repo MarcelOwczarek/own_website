@@ -2,8 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:own_website/features/Home_Page/widgets/Custom_SizedBox.dart';
-import 'package:own_website/features/Projects_Page/Projects_Page.dart';
 import 'package:sizer/sizer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
