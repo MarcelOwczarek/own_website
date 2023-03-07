@@ -1,9 +1,9 @@
 // ignore_for_file: camel_case_types, file_names
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:own_website/features/Home_Page/texts/text_desktop.dart';
-import 'package:own_website/features/Home_Page/texts/text_mobile.dart';
 
 class seemore_arrow extends StatelessWidget {
   const seemore_arrow({
@@ -46,7 +46,11 @@ class seemore_arrow extends StatelessWidget {
                       width: 40,
                       height: 40,
                     ),
-                    text_mobile[4],
+                    Text(
+                      'about me',
+                      style:
+                          GoogleFonts.raleway(fontSize: 17, color: Colors.cyan),
+                    ),
                   ],
                 ),
               ),

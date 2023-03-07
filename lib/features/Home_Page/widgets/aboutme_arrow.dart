@@ -1,6 +1,7 @@
 // ignore_for_file: camel_case_types
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:own_website/features/Home_Page/texts/text_desktop.dart';
 import 'package:own_website/features/Home_Page/texts/text_mobile.dart';
@@ -30,7 +31,10 @@ class aboutme_arrow extends StatelessWidget {
           // MOBILE //
           return Column(
             children: [
-              text_mobile[3],
+              Text(
+                'about me',
+                style: GoogleFonts.raleway(fontSize: 17, color: Colors.cyan),
+              ),
               const Image(
                 image: AssetImage('images/arrow_down.png'),
                 width: 40,
