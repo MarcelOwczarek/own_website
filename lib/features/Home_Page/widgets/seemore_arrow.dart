@@ -19,7 +19,7 @@ class seemore_arrow extends StatelessWidget {
           return Row(
             children: [
               Padding(
-                padding: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(20),
                 child: Column(
                   children: [
                     Lottie.network(
@@ -27,7 +27,7 @@ class seemore_arrow extends StatelessWidget {
                       width: 80,
                       height: 80,
                     ),
-                    text_desktop[3], // <- Text ('about me')..
+                    text_desktop[4], // <- Text ('about me')..
                   ],
                 ),
               ),
@@ -46,7 +46,7 @@ class seemore_arrow extends StatelessWidget {
                       width: 40,
                       height: 40,
                     ),
-                    text_mobile[3],
+                    text_mobile[4],
                   ],
                 ),
               ),

@@ -18,7 +18,7 @@ class Custom_CircleAvatar extends StatelessWidget {
       } else {
         // MOBILE //
         return const circleavatar_widget(
-          radius: 180,
+          radius: 175,
         );
       }
     });
