@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:own_website/features/Home_Page/texts/text_desktop.dart';
-import 'package:own_website/features/Home_Page/texts/text_mobile.dart';
 
 class aboutme_arrow extends StatelessWidget {
   const aboutme_arrow({
