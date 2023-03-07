@@ -16,54 +16,44 @@ class seemore_arrow extends StatelessWidget {
       builder: (context, constraints) {
         if (constraints.maxWidth >= 600) {
           // DESKTOP //
-          return seemorearrow_widget(
-            width: 80,
-            height: 80,
-            text: text_desktop[4],
+          return Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(10),
+                child: Column(
+                  children: [
+                    Lottie.network(
+                      'https://assets2.lottiefiles.com/packages/lf20_o0m8c13d.json',
+                      width: 80,
+                      height: 80,
+                    ),
+                    text_desktop[3], // <- Text ('about me')..
+                  ],
+                ),
+              ),
+            ],
           );
         } else {
           // MOBILE //
-          return seemorearrow_widget(
-            width: 50,
-            height: 50,
-            text: text_mobile[4],
+          return Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(10),
+                child: Column(
+                  children: [
+                    const Image(
+                      image: AssetImage('images/arrow_leftcorner.png'),
+                      width: 40,
+                      height: 40,
+                    ),
+                    text_mobile[3],
+                  ],
+                ),
+              ),
+            ],
           );
         }
       },
-    );
-  }
-}
-
-class seemorearrow_widget extends StatelessWidget {
-  const seemorearrow_widget({
-    super.key,
-    required this.width,
-    required this.height,
-    required this.text,
-  });
-
-  final double width;
-  final double height;
-  final Widget text;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Padding(
-          padding: const EdgeInsets.all(15),
-          child: Column(
-            children: [
-              Lottie.network(
-                'https://assets2.lottiefiles.com/packages/lf20_o0m8c13d.json',
-                width: width,
-                height: height,
-              ),
-              text, // <- Text ('see more')..
-            ],
-          ),
-        ),
-      ],
     );
   }
 }
