@@ -16,8 +16,17 @@ class Contact_Page extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return mobile_view(mail: mail, github: github, tel: tel);
-    // desktop_view(mail: mail, github: github, tel: tel);
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        if (constraints.maxWidth >= 600) {
+          // DESKTOP //
+          return desktop_view(mail: mail, github: github, tel: tel);
+        } else {
+          // MOBILE //
+          return mobile_view(mail: mail, github: github, tel: tel);
+        }
+      },
+    );
   }
 }
 
@@ -59,55 +68,55 @@ class mobile_view extends StatelessWidget {
   }
 }
 
-// class desktop_view extends StatelessWidget {
-//   const desktop_view({
-//     super.key,
-//     required this.mail,
-//     required this.github,
-//     required this.tel,
-//   });
+class desktop_view extends StatelessWidget {
+  const desktop_view({
+    super.key,
+    required this.mail,
+    required this.github,
+    required this.tel,
+  });
 
-//   final Uri mail;
-//   final Uri github;
-//   final Uri tel;
+  final Uri mail;
+  final Uri github;
+  final Uri tel;
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Center(
-//       child: Column(
-//         mainAxisAlignment: MainAxisAlignment.center,
-//         children: [
-//           Text(
-//             'Contact with me :)',
-//             style: GoogleFonts.raleway(color: Colors.white, fontSize: 30),
-//           ),
-//           const SizedBox(height: 40),
-//           Row(
-//             mainAxisAlignment: MainAxisAlignment.center,
-//             children: [
-//               Contact_button(context,
-//                   icon: Icons.mail_outline,
-//                   text: 'flutter@marcelowczarek.dev',
-//                   launch_url: mail),
-//               const SizedBox(width: 20),
-//               Contact_button(
-//                 context,
-//                 icon: Icons.code,
-//                 text: 'My profile on Github',
-//                 launch_url: github,
-//               ),
-//               const SizedBox(width: 20),
-//               Contact_button(context,
-//                   icon: Icons.smartphone_outlined,
-//                   text: '+48 794 116 095',
-//                   launch_url: tel),
-//             ],
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'Contact with me :)',
+            style: GoogleFonts.raleway(color: Colors.white, fontSize: 30),
+          ),
+          const SizedBox(height: 40),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Contact_button(context,
+                  icon: Icons.mail_outline,
+                  text: 'flutter@marcelowczarek.dev',
+                  launch_url: mail),
+              const SizedBox(width: 20),
+              Contact_button(
+                context,
+                icon: Icons.code,
+                text: 'My profile on Github',
+                launch_url: github,
+              ),
+              const SizedBox(width: 20),
+              Contact_button(context,
+                  icon: Icons.smartphone_outlined,
+                  text: '+48 794 116 095',
+                  launch_url: tel),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
 
 Widget Contact_button(
   BuildContext context, {

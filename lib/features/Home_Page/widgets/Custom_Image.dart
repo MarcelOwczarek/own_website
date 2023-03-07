@@ -9,6 +9,38 @@ class Custom_Image extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        if (constraints.maxWidth >= 600) {
+          // DESKTOP //
+          return const customimage_widget(
+            width: 250,
+            height: 250,
+          );
+        } else {
+          // MOBILE
+          return const customimage_widget(
+            width: 180,
+            height: 180,
+          );
+        }
+      },
+    );
+  }
+}
+
+class customimage_widget extends StatelessWidget {
+  const customimage_widget({
+    super.key,
+    required this.width,
+    required this.height,
+  });
+
+  final double width;
+  final double height;
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
         boxShadow: [
@@ -23,8 +55,8 @@ class Custom_Image extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
         child: Image.asset(
           'images/picture2.jpg',
-          width: 180,
-          height: 180,
+          width: width,
+          height: height,
           fit: BoxFit.fill,
         ),
       ),

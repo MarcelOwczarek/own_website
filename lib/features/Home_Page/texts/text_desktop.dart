@@ -60,7 +60,7 @@ class my_description_3 extends StatelessWidget {
       alignment: Alignment.bottomRight,
       child: Text(
         'Best Regards Marcel',
-        style: GoogleFonts.poppins(color: Colors.white, fontSize: 17),
+        style: GoogleFonts.poppins(color: Colors.white, fontSize: 15),
       ),
     );
   }
@@ -77,7 +77,7 @@ class my_description_2 extends StatelessWidget {
       padding: const EdgeInsets.all(1),
       child: Text(
         "I'm Marcel, I'm 22 years old and I'm glad you visited me. I am not afraid of new challenges and technologies, I appreciate change and development. I bravely take risks to achieve my goals. I can adapt to any situation to deal with problems. I am friendly and sociable, confident in myself and my beliefs. My main interests are new technologies, programming, traveling and cinema. I started my adventure with the Flutter framework in June 2022.",
-        style: GoogleFonts.poppins(color: Colors.white, fontSize: 17),
+        style: GoogleFonts.poppins(color: Colors.white, fontSize: 15),
         textAlign: TextAlign.justify,
       ),
     );
@@ -95,7 +95,7 @@ class my_description_1 extends StatelessWidget {
       alignment: Alignment.topLeft,
       child: Text(
         'Hello',
-        style: GoogleFonts.poppins(color: Colors.white, fontSize: 17),
+        style: GoogleFonts.poppins(color: Colors.white, fontSize: 15),
       ),
     );
   }

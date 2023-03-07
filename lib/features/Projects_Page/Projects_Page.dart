@@ -22,45 +22,98 @@ class Projects_Page extends StatelessWidget {
   final Uri RCA = Uri.parse('https://republiccustomsarmy.web.app/#/');
   final Uri invoice_app = Uri.parse('https://invoiceapp.web.app/#/');
 
-  final mobile = GoogleFonts.raleway(fontSize: 20, color: Colors.white);
-  // final desktop = GoogleFonts.raleway(fontSize: 30, color: Colors.white);
+  final mobile = GoogleFonts.raleway(color: Colors.white);
+  final desktop = GoogleFonts.raleway(fontSize: 15, color: Colors.white);
+  final tittle = GoogleFonts.raleway(fontSize: 22, color: Colors.white);
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const sizedbox(),
-            Text(
-              'My Projects:',
-              style: mobile,
-            ),
-            const sizedbox(),
-            Project_Container(
-              context,
-              project_name: project_name,
-              project_description: project_description,
-              button_icon: Icons.check,
-              button_text: button_text,
-              button_color: Colors.green,
-              launch_url: RCA,
-            ),
-            const sizedbox(),
-            Project_Container(
-              context,
-              project_name: project_name_2,
-              project_description: project_description_2,
-              button_icon: Icons.construction,
-              button_text: button_text_2,
-              button_color: Colors.white12,
-              launch_url: invoice_app,
-            ),
-            const sizedbox(),
-          ],
-        )
-      ],
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        if (constraints.maxWidth >= 600) {
+          // DESKTOP //
+          return ListView(
+            children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const sizedbox(),
+                  Text(
+                    'My Projects:',
+                    style: tittle,
+                  ),
+                  const sizedbox(),
+                  Project_Container(
+                    context,
+                    project_name: project_name,
+                    project_description: project_description,
+                    button_icon: Icons.check,
+                    button_text: button_text,
+                    button_color: Colors.green,
+                    launch_url: RCA,
+                    width: 800,
+                    style: desktop,
+                  ),
+                  const sizedbox(),
+                  Project_Container(
+                    context,
+                    project_name: project_name_2,
+                    project_description: project_description_2,
+                    button_icon: Icons.construction,
+                    button_text: button_text_2,
+                    button_color: Colors.white12,
+                    launch_url: invoice_app,
+                    width: 800,
+                    style: desktop,
+                  ),
+                  const sizedbox(),
+                ],
+              )
+            ],
+          );
+        } else {
+          // MOBILE //
+          return ListView(
+            children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const sizedbox(),
+                  Text(
+                    'My Projects:',
+                    style: mobile,
+                  ),
+                  const sizedbox(),
+                  Project_Container(
+                    context,
+                    project_name: project_name,
+                    project_description: project_description,
+                    button_icon: Icons.check,
+                    button_text: button_text,
+                    button_color: Colors.green,
+                    launch_url: RCA,
+                    width: 350,
+                    style: mobile,
+                  ),
+                  const sizedbox(),
+                  Project_Container(
+                    context,
+                    project_name: project_name_2,
+                    project_description: project_description_2,
+                    button_icon: Icons.construction,
+                    button_text: button_text_2,
+                    button_color: Colors.white12,
+                    launch_url: invoice_app,
+                    width: 350,
+                    style: mobile,
+                  ),
+                  const sizedbox(),
+                ],
+              )
+            ],
+          );
+        }
+      },
     );
   }
 }
@@ -73,14 +126,13 @@ Widget Project_Container(
   required String button_text,
   required Color button_color,
   required dynamic launch_url,
+  required double width,
+  required TextStyle style,
 }) {
-  final mobile = GoogleFonts.raleway(color: Colors.white);
-  // final desktop = GoogleFonts.raleway(color: Colors.white, fontSize: 17);
-
   return FittedBox(
     fit: BoxFit.fitHeight,
     child: Container(
-      width: 350,
+      width: width,
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(
           Radius.circular(15),
@@ -91,11 +143,11 @@ Widget Project_Container(
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
-            Text(project_name, style: mobile),
+            Text(project_name, style: style),
             const SizedBox(height: 25),
             Text(
               project_description,
-              style: mobile,
+              style: style,
               textAlign: TextAlign.justify,
             ),
             const SizedBox(height: 15),
@@ -114,7 +166,7 @@ Widget Project_Container(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Icon(button_icon, size: 20),
-                    Text(button_text, style: mobile),
+                    Text(button_text, style: style),
                   ],
                 ),
               ),
