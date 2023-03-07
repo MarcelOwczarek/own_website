@@ -7,14 +7,11 @@ import 'package:own_website/features/Projects_Page/Projects_Page.dart';
 import 'package:own_website/features/Home_Page/texts/text_mobile.dart';
 import 'package:own_website/features/Home_Page/widgets/Custom_NavigationDrawer.dart';
 import 'package:provider/provider.dart';
-import 'package:sizer/sizer.dart';
 
 class Root_Page extends StatelessWidget {
-  Root_Page({
+  const Root_Page({
     super.key,
   });
-
-  final isMobile = SizerUtil.deviceType == DeviceType.mobile;
 
   @override
   Widget build(BuildContext context) {
@@ -25,8 +22,8 @@ class Root_Page extends StatelessWidget {
         backgroundColor: Colors.grey[900],
       ),
       body: Container(
-        height: isMobile ? 100.h : 500.h,
-        width: isMobile ? 100.w : 500.w,
+        height: double.infinity,
+        width: double.infinity,
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [
@@ -59,7 +56,7 @@ class _MainPageState extends State<MainPage> {
 
     switch (navigationItem) {
       case NavigationItem.homepage:
-        return Home_Page();
+        return const Home_Page();
       case NavigationItem.projects:
         return Projects_Page();
       case NavigationItem.contact:

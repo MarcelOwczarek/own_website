@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sizer/sizer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Projects_Page extends StatelessWidget {
@@ -23,10 +22,8 @@ class Projects_Page extends StatelessWidget {
   final Uri RCA = Uri.parse('https://republiccustomsarmy.web.app/#/');
   final Uri invoice_app = Uri.parse('https://invoiceapp.web.app/#/');
 
-  final isMobile = SizerUtil.deviceType == DeviceType.mobile;
-
   final mobile = GoogleFonts.raleway(fontSize: 20, color: Colors.white);
-  final desktop = GoogleFonts.raleway(fontSize: 30, color: Colors.white);
+  // final desktop = GoogleFonts.raleway(fontSize: 30, color: Colors.white);
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +35,7 @@ class Projects_Page extends StatelessWidget {
             const sizedbox(),
             Text(
               'My Projects:',
-              style: isMobile ? mobile : desktop,
+              style: mobile,
             ),
             const sizedbox(),
             Project_Container(
@@ -78,15 +75,12 @@ Widget Project_Container(
   required dynamic launch_url,
 }) {
   final mobile = GoogleFonts.raleway(color: Colors.white);
-  final desktop = GoogleFonts.raleway(color: Colors.white, fontSize: 17);
-
-  final isMobile = SizerUtil.deviceType == DeviceType.mobile;
+  // final desktop = GoogleFonts.raleway(color: Colors.white, fontSize: 17);
 
   return FittedBox(
     fit: BoxFit.fitHeight,
     child: Container(
-      width: isMobile ? 350 : 800,
-      height: isMobile ? null : null,
+      width: 350,
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(
           Radius.circular(15),
@@ -97,11 +91,11 @@ Widget Project_Container(
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
-            Text(project_name, style: isMobile ? mobile : desktop),
+            Text(project_name, style: mobile),
             const SizedBox(height: 25),
             Text(
               project_description,
-              style: isMobile ? mobile : desktop,
+              style: mobile,
               textAlign: TextAlign.justify,
             ),
             const SizedBox(height: 15),
@@ -120,7 +114,7 @@ Widget Project_Container(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Icon(button_icon, size: 20),
-                    Text(button_text, style: isMobile ? mobile : desktop),
+                    Text(button_text, style: mobile),
                   ],
                 ),
               ),
