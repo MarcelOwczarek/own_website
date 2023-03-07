@@ -47,7 +47,7 @@ class seemore_arrow extends StatelessWidget {
                       height: 40,
                     ),
                     Text(
-                      'about me',
+                      'see more',
                       style:
                           GoogleFonts.raleway(fontSize: 17, color: Colors.cyan),
                     ),
