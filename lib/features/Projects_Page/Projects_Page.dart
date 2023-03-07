@@ -24,7 +24,8 @@ class Projects_Page extends StatelessWidget {
 
   final mobile = GoogleFonts.raleway(color: Colors.white);
   final desktop = GoogleFonts.raleway(fontSize: 15, color: Colors.white);
-  final tittle = GoogleFonts.raleway(fontSize: 22, color: Colors.white);
+  final tittle_mobile = GoogleFonts.raleway(fontSize: 18, color: Colors.white);
+  final tittle_desktop = GoogleFonts.raleway(fontSize: 22, color: Colors.white);
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +41,7 @@ class Projects_Page extends StatelessWidget {
                   const sizedbox(),
                   Text(
                     'My Projects:',
-                    style: tittle,
+                    style: tittle_desktop,
                   ),
                   const sizedbox(),
                   Project_Container(
@@ -81,7 +82,7 @@ class Projects_Page extends StatelessWidget {
                   const sizedbox(),
                   Text(
                     'My Projects:',
-                    style: mobile,
+                    style: tittle_mobile,
                   ),
                   const sizedbox(),
                   Project_Container(
